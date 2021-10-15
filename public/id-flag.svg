@@ -1,0 +1,9 @@
+ <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+                                        aria-hidden="true" role="img" width="1.89em" height="1em"
+                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 301 201">
+                                        <rect x="0" y="0" width="301" height="201" fill="none" stroke="none" />
+                                        <g fill="none">
+                                            <path fill="#CE1126" d="M.5.5h300v200H.5z" />
+                                            <path fill="#FFF" d="M.5 100.5h300v100H.5z" />
+                                        </g>
+                                    </svg> 
