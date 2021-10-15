@@ -1,18 +1,24 @@
 import React from 'react'
 
 interface Props {
-
+    item: {
+        id: number
+        title: string
+        price: string
+        category: string
+        description: string
+        image: string
+    }
 }
 
-const Item = (props: Props) => {
-
+const Item: React.FC<Props> = ({ item }) => {
     return (
         <div className="col">
             <div className="product__image">
                 <a href="http://">
-                    <div className="main" style={{ backgroundImage: "url(" + '/analogue.jpg' + ")" }}>
+                    <div className="main" style={{ backgroundImage: "url(" + item.image + ")" }}>
                     </div>
-                    <div className="secondary" style={{ backgroundImage: "url(" + '/analogue-hover.jpg' + ")" }}>
+                    <div className="secondary" style={{ backgroundImage: "url(" + item.image + ")" }}>
                     </div>
                 </a>
 
@@ -30,9 +36,9 @@ const Item = (props: Props) => {
                 </svg></a>
 
             </div>
-            <div className="product__brand my-2">Kelles</div>
-            <div className="product__name">analogue resin strap</div>
-            <div className="product__price mt-1">$30.00</div>
+            <div className="product__brand my-2">{item.category}</div>
+            <div className="product__name">{item.title}</div>
+            <div className="product__price mt-1">${item.price}</div>
         </div>
     )
 }

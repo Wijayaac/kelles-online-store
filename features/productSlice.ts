@@ -4,14 +4,15 @@ import { Rootstate } from "../app/store";
 
 // here we typyng the types for the state
 export type ProductState = {
-  data: {
-    id: number;
-    title: string;
-    price: string;
-    category: string;
-    description: string;
-    image: string;
-  }[];
+  data:
+    | {
+        id: number;
+        title: string;
+        price: string;
+        category: string;
+        description: string;
+        image: string;
+      }[];
   pending: boolean;
   error: boolean;
 };
@@ -41,7 +42,9 @@ const initialState: ProductState = {
 export const getProductItem = createAsyncThunk(
   "product/productItem",
   async () => {
-    const response = await axios.get("https://fakestoreapi.com/products");
+    const response = await axios.get(
+      "https://fakestoreapi.com/products?limit=4"
+    );
     return response.data;
   }
 );
